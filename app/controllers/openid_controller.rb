@@ -12,17 +12,20 @@ class OpenidController < ApplicationController
 
   # callback methods after OpenID authentcation
   def auth_callback
+  	@response = params
   	client.redirect_uri = openid_auth_callback_url
     client.authorization_code = params['code']
-    access_token = client.access_token! client_auth_method: client_auth_method
-    _id_token_ = decode_id access_token.id_token
-    _id_token_.verify!(
+
+    @access_token = client.access_token! client_auth_method: client_auth_method
+    @userinfo = @access_token.userinfo!
+
+    @id_token = decode_id @access_token.id_token
+    @id_token.verify!(
       issuer: ENV['OPENID_ISSUER'],
       client_id: ENV['OPENID_CLIENT_ID'],
       nonce: stored_nonce
     )
-
-    
+    @openid_subject = @id_token.subject
   end
 
   protected
@@ -44,7 +47,6 @@ class OpenidController < ApplicationController
   end
 
   def openid_config
-  	binding.pry
     @openid_config ||= OpenIDConnect::Discovery::Provider::Config.discover! ENV['OPENID_ISSUER']
   end
 
@@ -63,5 +65,12 @@ class OpenidController < ApplicationController
 
   def decode_id(id_token)
     OpenIDConnect::ResponseObject::IdToken.decode id_token, openid_config.jwks
+  end
+
+  def to_access_token(access_token)
+    OpenIDConnect::AccessToken.new(
+      access_token: access_token,
+      client: client
+    )
   end
 end

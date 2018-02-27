@@ -3,5 +3,5 @@ Rails.application.routes.draw do
   root to: 'home#index'
 
   get '/auth', to: 'openid#auth', as: 'openid_auth'
-  get '/auth_callback', to: 'openid#auth_callback', as: 'openid_auth_callback'
+  get '/openid_auth_callback', to: 'openid#auth_callback', as: 'openid_auth_callback'
 end

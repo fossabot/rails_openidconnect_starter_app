@@ -1,6 +1,6 @@
 class ApplicationController < ActionController::Base
 	include Nonce
-	
+
   protect_from_forgery prepend: true
 
   rescue_from(
@@ -10,7 +10,12 @@ class ApplicationController < ActionController::Base
     MultiJson::LoadError,
     OpenSSL::SSL::SSLError
   ) do |e|
-    puts e.message
+    flash[:error] = if e.message.length > 2000
+      'Unknown Error'
+    else
+      e.message
+    end
+    
     redirect_to root_url
   end
 end

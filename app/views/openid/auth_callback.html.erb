@@ -1,0 +1,39 @@
+<section>
+  <h2>Response from OpenID Provider</h2>
+  <article>
+    <h3>Auth Callback Response</h3>
+    <pre><%= JSON.pretty_generate @response.as_json %></pre>
+  </article>
+
+  <article>
+    <h3>User Info</h3>
+    <pre><%= JSON.pretty_generate @userinfo.as_json %></pre>
+    <% unless @userinfo.valid? %>
+      <dl class="errors">
+        <% @userinfo.errors.full_messages.each do |error| %>
+          <dd><%= error %></dd>
+        <% end %>
+      </dl>
+    <% end %>
+  </article>
+
+  <article>
+    <h3>OpenID Subject</h3>
+    <pre><%= @openid_subject %></pre>
+  </article>
+
+  <article>
+    <h3>Access Token</h3>
+    <pre><%= @access_token.access_token %></pre>
+  </article>
+
+  <article>
+    <h3>ID Token</h3>
+    <pre><%= @access_token.id_token %></pre>
+  </article>
+
+  <article>
+    <h3>Tokesn from Verify!</h3>
+    <pre><%= JSON.pretty_generate @id_token.as_json %></pre>
+  </article>  
+</section>

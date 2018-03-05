@@ -1,0 +1,10 @@
+{
+  "name": "Sample OpenID project",
+  "description": "Sample project connecting to OpenID provider",
+  "repository": "https://github.com/Deauthorized/rails-5.1-openid-sample.git",
+  "keywords": [
+  	"Ruby",
+  	"Rails",
+  	"OpenID"
+  ]
+}

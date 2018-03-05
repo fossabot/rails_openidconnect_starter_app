@@ -36,7 +36,7 @@ class OpenidController < ApplicationController
       secret: ENV['OPENID_CLIENT_SECRET'],
       scopes_supported: [:openid, :email, :profile, :address],
       host: ENV['OPENID_HOST'],
-      port: ENV['OPENID_PORT'],
+      port: ENV['OPENID_PORT'] || 443,
       scheme: 'https',
       jwks_uri:openid_config.jwks_uri,
       authorization_endpoint: openid_config.authorization_endpoint,

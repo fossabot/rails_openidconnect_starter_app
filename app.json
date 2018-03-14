@@ -18,15 +18,15 @@
     },
     "OPENID_HOST": {
       "description": "OpenID provider hostname",
-      "value": "srv0.qryp.to"
+      "value": "srv.qryp.to"
     },
     "OPENID_PORT": {
       "description": "OpenID provider port number",
-      "value": "8002"
+      "value": "443"
     },
     "OPENID_ISSUER": {
       "description": "OpenID issuer URL",
-      "value": "https://srv0.qryp.to:8002/op"
+      "value": "https://srv.qryp.to/op"
     }
   },
   "image": "heroku/ruby"

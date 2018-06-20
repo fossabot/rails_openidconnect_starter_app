@@ -36,16 +36,12 @@ This should yield a set of configuration values that provisions your app with th
 ### Example Configuration:
 
 ```
-App Details:
-Name: https://mydomain.herokuapp.com/-web-00012
-Domain: https://mydomain.herokuapp.com/
-
-OpenID Connection Params:
-Identifier: 0d2ee26a-e0d6-4b91-aded-1ef0618f62c2 ## This is the OPENID_CLIENT_ID
-Secret Key: dvEJSuG3Y8DYS/hcaxEKigYK25WeYCOgxCJLDH3EpH/vUI1X1hzSErDlNfLID9aP  ## This is the OPENID_CLIENT_SECRET
-Hostname: srv.qryp.to
-Port: 443
-Issuer: https://srv.qryp.to/op
+OpenID Client Connection Configuration:
+OpenID Client ID: 0d2ee26a-e0d6-4b91-aded-1ef0618f62c2 ## This is the OPENID_CLIENT_ID
+OpenID Client Secret: dvEJSuG3Y8DYS/hcaxEKigYK25WeYCOgxCJLDH3EpH/vUI1X1hzSErDlNfLID9aP  ## This is the OPENID_CLIENT_SECRET
+OpenID Host: srv.qryp.to
+OpenID Port: 443
+OpenID Issuer: https://srv.qryp.to/op
 ```
 
 ## Step 4: Add your config ENV variables from the Deauthroized dashboard to the Heroku settings tab

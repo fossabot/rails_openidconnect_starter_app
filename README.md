@@ -8,7 +8,7 @@ This demo app will deploy to Heroku, but you need to do a little setup to get it
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
 
-## Let the app set your default env variables
+## Default ENV variables
 
 The following variables will be loaded by default into your heroku config when you hit the deploy button. These variables will not change unless you are running your own instance of the server using docker or our enteprise tier.
 

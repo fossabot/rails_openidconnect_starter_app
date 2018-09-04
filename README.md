@@ -37,13 +37,7 @@ To experiment with making edits to the sample application:
 
 ```sh
 git clone https://github.com/Deauthorized/rails_openidconnect_starter_app
-```
-
-```sh
 cd rails_openidconnect_starter_app
-```
-
-```sh
 bundle install
 ```
 
@@ -51,13 +45,7 @@ bundle install
 
 ```sh
 heroku create --app deauthorized-rails-sample
-```
-
-```sh
 git config --list | grep heroku
-```
-
-```sh
 git push heroku master
 ```
 

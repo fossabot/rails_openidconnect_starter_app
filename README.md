@@ -33,7 +33,7 @@ Heroku is the fastest way to get the sample app running.
 
 To experiment with making edits to the sample application:
 
-_1. Clone sample application locally_
+1. Clone sample application locally
 
 ```sh
 git clone https://github.com/Deauthorized/rails_openidconnect_starter_app
@@ -41,7 +41,7 @@ cd rails_openidconnect_starter_app
 bundle install
 ```
 
-_2. Create Heroku Application:_
+2. Create Heroku Application:
 
 ```sh
 heroku create --app deauthorized-rails-sample
@@ -49,7 +49,7 @@ git config --list | grep heroku
 git push heroku master
 ```
 
-_3. Make your code updates in [`app/controllers/openid_controller.rb`]_(https://github.com/Deauthorized/rails_openidconnect_starter_app/blob/master/app/controllers/openid_controller.rb)
+3. Make your code updates in [`app/controllers/openid_controller.rb`](https://github.com/Deauthorized/rails_openidconnect_starter_app/blob/master/app/controllers/openid_controller.rb)
 
 ```sh
 git add app/controllers/openid_controller.rb

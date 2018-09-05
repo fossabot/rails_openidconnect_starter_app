@@ -5,18 +5,18 @@
 
 ## Create a Deauthorized Application
 
-1. Sign up for the Deauthorized Private Beta
+1. Sign up for the [`Deauthorized Private Beta`](https://www.deauthorized.com/beta_invite)
 2. Log into Deauthorized Dashboard
 3. Create a new application from the Create Applications tab
 
-With your application provisioned, you will have the necessary `OPENID_CLIENT_ID` and `OPENID_CLIENT_SECRET` to launch the sample application.
+With your application provisioned, you will have the necessary `OPENID_CLIENT_ID` and `OPENID_CLIENT_SECRET` to launch the sample application. Here is an example setup for your Heroku ENV:
 
 ```sh
-OpenID Client ID: 0d2ee26a-e0d6-4b91-aded-1ef0618f62c2 ## This is the OPENID_CLIENT_ID
-OpenID Client Secret: dvEJSuG3Y8DYS/hcaxEKigYK25WeYCOgxCJLDH3EpH/vUI1X1hzSErDlNfLID9aP  ## This is the OPENID_CLIENT_SECRET
-OpenID Host: srv.qryp.to
-OpenID Port: 443
-OpenID Issuer: https://srv.qryp.to/op
+OPENID_CLIENT_ID: 0d2ee26a-e0d6-4b91-aded-1ef0618f62c2 
+OPENID_CLIENT_SECRET: dvEJSuG3Y8DYS/hcaxEKigYK25WeYCOgxCJLDH3EpH/vUI1X1hzSErDlNfLID9aP  
+OPENID_HOST: srv.qryp.to
+OPENID_ISSUER: https://srv.qryp.to/op
+OPENID_ISSUER: 443
 ```
 
 ## Deploy Sample Application
@@ -36,7 +36,7 @@ To experiment with making edits to the sample application:
 1. Clone sample application locally
 
 ```sh
-git clone https://github.com/Deauthorized/rails_openidconnect_starter_app
+git clone https://github.com/Deauthorized/rails_openidconnect_starter_app 
 cd rails_openidconnect_starter_app
 bundle install
 ```
@@ -47,7 +47,7 @@ bundle install
 heroku create --app deauthorized-rails-sample
 git config --list | grep heroku
 git push heroku master
-```
+``` 
 
 3. Make your code updates in [`app/controllers/openid_controller.rb`](https://github.com/Deauthorized/rails_openidconnect_starter_app/blob/master/app/controllers/openid_controller.rb)
 

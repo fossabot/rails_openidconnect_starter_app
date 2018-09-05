@@ -1,6 +1,6 @@
 {
-  "name": "Sample OpenID project",
-  "description": "Sample project connecting to OpenID provider",
+  "name": "Rails OpenID project",
+  "description": "Rails project connecting to OpenID provider",
   "repository": "https://github.com/Deauthorized/rails_openidconnect_starter_app",
   "keywords": [
     "Ruby",

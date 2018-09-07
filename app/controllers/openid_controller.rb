@@ -56,7 +56,7 @@ class OpenidController < ApplicationController
 
   def client_auth_method
     supported = openid_config.token_endpoint_auth_methods_supported
-    if supported.present? && !supported.include?('client_secret_basic')
+    if supported.present? && !supported.include?('client_secret_post')
       :post
     else
       :basic

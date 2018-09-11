@@ -7,11 +7,12 @@ end
 
 ruby '2.3.4'
 gem 'rails', '~> 5.1.4'
+gem 'dotenv'
 gem 'pg'
+gem 'openid_connect'
 gem 'puma', '~> 3.7'
 gem 'sass-rails', '~> 5.0'
-gem 'openid_connect'
-gem 'dotenv'
+gem 'uglifier', '>= 1.3.0'	
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]

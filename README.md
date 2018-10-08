@@ -5,7 +5,7 @@
 
 ## Create a Ultra Auth Application
 
-1. Sign up for the [`Ultra Auth Private Beta`](https://www.deauthorized.com/beta_invite)
+1. Sign up [`Ultra Auth `](https://www.ultraauth.com/user/sign_up)
 2. Log into Ultra Auth Dashboard
 3. Create a new application from the Create Applications tab
 

@@ -1,7 +1,7 @@
 # Ruby on Rails OpenID Connect with Ultra Auth Sample
 
 - This is a sample Rails 5.1 app that uses OpenID Connect with the Ultra Auth identity server.
-- This app also serves as a basic blueprint for intergation with your apps for development.  
+- This app also serves as a basic blueprint for interaction with your apps for development.  
 
 ## Create a Ultra Auth Application
 
@@ -61,4 +61,4 @@ heroku open
 
 ## Documentation
 
-For more information on using Ultra Auth's biometric authentication solutions, [visit our website](https://www.deauthorized.com)
+For more information on using Ultra Auth's biometric authentication solutions, [visit our website](https://www.ultraauth.com)

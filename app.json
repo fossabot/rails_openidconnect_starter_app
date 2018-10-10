@@ -8,6 +8,9 @@
     "OpenID Connect Client"
   ],
   "env": {
+    "DOMAIN_URL": {
+      "description": "This is the name of your Heroku App."
+    },
     "OPENID_CLIENT_ID": {
       "description": "Client ID registered on OpenID provider"
     },

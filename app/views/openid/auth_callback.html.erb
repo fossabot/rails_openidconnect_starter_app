@@ -1,39 +1,53 @@
-<section>
-  <h2>Response from OpenID Provider</h2>
-  <article>
-    <h3>Auth Callback Response</h3>
-    <pre><%= JSON.pretty_generate @response.as_json %></pre>
-  </article>
+<div class="container mt-300">
+  <div class="row">
+    <div class="col-md-6 offset-md-3 text-center">
+      <section>
 
-  <article>
-    <h3>User Info</h3>
-    <pre><%= JSON.pretty_generate @userinfo.as_json %></pre>
-    <% unless @userinfo.valid? %>
-      <dl class="errors">
-        <% @userinfo.errors.full_messages.each do |error| %>
-          <dd><%= error %></dd>
-        <% end %>
-      </dl>
-    <% end %>
-  </article>
+        <a href="<%= ENV['OPENID_ISSUER']%>/session/end?post_logout_redirect_uri=<%= ENV['DOMAIN_URL'] %>/&id_token_hint=<%= @access_token.id_token %>" class="btn btn-lg btn-primary">
+          Logout
+        </a>
 
-  <article>
-    <h3>OpenID Subject</h3>
-    <pre><%= @openid_subject %></pre>
-  </article>
+        <h2>Response from OpenID Provider</h2>
+        <article>
+          <h3>Auth Callback Response</h3>
+          <pre><%= JSON.pretty_generate @response.as_json %></pre>
+        </article>
 
-  <article>
-    <h3>Access Token</h3>
-    <pre><%= @access_token.access_token %></pre>
-  </article>
+        <article>
+          <h3>User Info</h3>
+          <pre><%= JSON.pretty_generate @userinfo.as_json %></pre>
+          <% unless @userinfo.valid? %>
+            <dl class="errors">
+              <% @userinfo.errors.full_messages.each do |error| %>
+                <dd><%= error %></dd>
+              <% end %>
+            </dl>
+          <% end %>
+        </article>
 
-  <article>
-    <h3>ID Token</h3>
-    <pre><%= @access_token.id_token %></pre>
-  </article>
+        <article>
+          <h3>OpenID Subject</h3>
+          <pre><%= @openid_subject %></pre>
+        </article>
 
-  <article>
-    <h3>Tokesn from Verify!</h3>
-    <pre><%= JSON.pretty_generate @id_token.as_json %></pre>
-  </article>  
-</section>
+        <article>
+          <h3>Access Token</h3>
+          <pre><%= @access_token.access_token %></pre>
+        </article>
+
+        <article>
+          <h3>ID Token</h3>
+          <pre><%= @access_token.id_token %></pre>
+        </article>
+
+        <article>
+          <h3>Tokens from Verify!</h3>
+          <pre><%= JSON.pretty_generate @id_token.as_json %></pre>
+        </article>
+      </section>
+    </div>
+  </div>
+</div>
+
+
+

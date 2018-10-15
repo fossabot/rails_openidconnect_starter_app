@@ -9,7 +9,7 @@
   ],
   "env": {
     "DOMAIN_URL": {
-      "description": "This is the name of your Heroku App."
+      "description": "This is the URL for the app you just created (https://myapp.herokuapp.com)"
     },
     "OPENID_CLIENT_ID": {
       "description": "Client ID registered on OpenID provider"

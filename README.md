@@ -26,6 +26,7 @@ Heroku is the fastest way to get the sample app running.
 ### Single Click Heroku Deployment
 
 1. Deploy by clicking button below:<br/><br/>[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/UltraAuth/rails_openidconnect_starter_app)
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fultraauth%2Frails_openidconnect_starter_app.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fultraauth%2Frails_openidconnect_starter_app?ref=badge_shield)
 
 2. Update `OPENID_CLIENT_ID` and `OPENID_CLIENT_SECRET` environment vars with you with those you provisioned in the Ultra Auth dashboard.
 
@@ -62,3 +63,7 @@ heroku open
 ## Documentation
 
 For more information on using Ultra Auth's biometric authentication solutions, [visit our website](https://www.ultraauth.com)
+
+
+## License
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fultraauth%2Frails_openidconnect_starter_app.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fultraauth%2Frails_openidconnect_starter_app?ref=badge_large)
